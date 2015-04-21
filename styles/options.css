@@ -1,0 +1,7 @@
+#options fieldset[name='function_args'] {
+    display: none;
+}
+
+#remembered fieldset[name='site_info'] {
+    display: none;
+}

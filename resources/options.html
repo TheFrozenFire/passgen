@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../styles/options.css">
+    </head>
+    <body>
+        <form id="options">
+            <h2>General</h2>
+            <p name="password_opts">
+                <label>Master Password: <input type="password" name="password" data-autosave="password"></label>
+            </p>
+            <p id="key_opts">
+                <label>Password Key: <input type="password" name="key" data-autosave="password_key" disabled></label>
+                <label><input type="checkbox" name="key_enabled" data-autosave="password_key_enabled"> Enabled</label>
+            </p>
+            <p id="function_opts">
+                <label>Hash Function: <select name="function" data-autosave="function"></select></label>
+                <fieldset name="function_args"></fieldset>
+            </p>
+            <p id="length_opts">
+                <label>Default Length: <input type="number" name="length" min="0" data-autosave="length"></label>
+                <label><input type="checkbox" name="length_repeat" data-autosave="length_repeat"> Repeat</label>
+            </p>
+        </form>
+        <form id="remembered">
+            <h2>Remembered Sites</h2>
+            <p>
+                <label>Site: <input type="text" name="site" list="list"></label>
+            </p>
+            <fieldset name="site_info">
+                <p>
+                    <label>Site: <output name="display_site" for="site"></output></label>
+                </p>
+                <p>
+                    <label>Length: <input type="number" name="length" min="0"></label>
+                </p>
+            </fieldset>
+            <datalist name="list"></datalist>
+        </form>
+        <script src="../scripts/jquery.min.js"></script>
+        <script src="../scripts/options.js"></script>
+    </body>
+</html>

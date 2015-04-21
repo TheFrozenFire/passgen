@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chrome Password Generator",
+  "description": "Deterministically generate passwords using hash functions",
+  "version": "0.0",
+  "options_ui": {
+    "page": "resources/options.html",
+    "chrome_style": true
+  },
+  "browser_action": {
+    "default_icon": "resources/logo.svg",
+    "default_popup": "resources/popup.html"
+  },
+  "permissions": [
+    "webNavigation",
+    "storage",
+    "identity"
+  ],
+  "background": {
+    "scripts": [
+      "src/extension.js"
+    ],
+    "persistent": false
+  }
+}
